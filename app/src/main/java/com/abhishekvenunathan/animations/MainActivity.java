@@ -1,0 +1,34 @@
+package com.abhishekvenunathan.animations;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
+
+public class MainActivity extends AppCompatActivity {
+
+
+
+    public void fade(View view){
+
+        ImageView cat1 = findViewById(R.id.catView1);
+        ImageView cat2 = findViewById(R.id.catView2);
+        cat1.animate().alpha(0f).setDuration(2000);
+        cat2.animate().alpha(1f).setDuration(2000);
+    }
+
+    public void fade2(View view){
+
+        ImageView cat1 = findViewById(R.id.catView1);
+        ImageView cat2 = findViewById(R.id.catView2);
+        cat2.animate().alpha(0f).setDuration(2000);
+        cat1.animate().alpha(1f).setDuration(2000);
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+
+}
